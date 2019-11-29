@@ -13,9 +13,17 @@
 
 import requests
 
-data = {
-    "name":"Abner"
-}
+# data = {
+#     "name":"Abner"
+# }
 
-res = requests.get('http://gen-net.herokuapp.com/api/users', params=data)
-print(res.json())
+# res = requests.get('http://gen-net.herokuapp.com/api/users', params=data)
+# print(res.json())
+
+
+
+
+res = requests.post('http://localhost/12')
+res = res.json()
+# print(res['nome'])
+print(res)
