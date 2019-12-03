@@ -1,7 +1,7 @@
-from pymongo import MongoClients
+from pymongo import MongoClient
 
 # FAZENDO CONECXAO COM O MONGODB
-mongo_con = MongoClients()
+mongo_con = MongoClient()
 # USAR BANCO
-mongo_db = mongo_con['flask-app']
+db = mongo_con['flask-app']
 
