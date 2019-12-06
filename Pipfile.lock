@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8f510d9b85c80e7bae827bab07a47ac25694a46de55068f9cd73064b9afe2ffc"
+            "sha256": "b5c1bd90ef2b671cfc43eb321c4380438864218fd5e201c7a9ac80a84bcf6c5d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -94,6 +94,14 @@
             "index": "pypi",
             "version": "==2.10.3"
         },
+        "ldap3": {
+            "hashes": [
+                "sha256:1898194d872539670a2f36d4b56fe5a35d4b9ead28103bec78f05a8993e8122f",
+                "sha256:27cb673e7afcb539f6adcae5a3ecac4e74eb37ca0a2d50dc98f29a3829eee529"
+            ],
+            "index": "pypi",
+            "version": "==2.6.1"
+        },
         "markupsafe": {
             "hashes": [
                 "sha256:00bc623926325b26bb9605ae9eae8a215691f33cae5df11ca5424f06f2d1f473",
@@ -141,6 +149,13 @@
                 "sha256:61aa52a0f18b71c5cc58232d2cf8f8d09cd67fcad60b742a60124cb8d6951488"
             ],
             "version": "==5.4.4"
+        },
+        "pyasn1": {
+            "hashes": [
+                "sha256:39c7e2ec30515947ff4e87fb6f456dfc6e84857d34be479c9d4a4ba4bf46aa5d",
+                "sha256:aef77c9fb94a3ac588e87841208bdec464471d9871bd5050a287cc9a475cd0ba"
+            ],
+            "version": "==0.4.8"
         },
         "pymongo": {
             "hashes": [

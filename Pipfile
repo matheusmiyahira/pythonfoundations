@@ -23,6 +23,7 @@ Werkzeug = "==0.16.0"
 docker = "*"
 jenkins = "*"
 python-jenkins = "*"
+ldap3 = "*"
 
 [requires]
 python_version = "3.7"
