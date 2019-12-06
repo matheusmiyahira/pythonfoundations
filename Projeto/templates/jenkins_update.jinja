@@ -1,0 +1,18 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+    Atualizar Job
+{% endblock %}
+
+{% block title_card %}
+    <h5 class="card-title">Atualizar Job {{ job.name }}</h5>
+{% endblock %}
+
+{% block conteudo %}
+    <form action="/rebuild" method="POST">
+        <input type="hidden" name="name" value="{{ job.name }}">
+        <textarea name="xml" id="" rows="16" class="form-control">{{ job.xml }}</textarea>
+        <br>
+        <button type="submit" class="btn btn-primary pull-right">Enviar</button>
+    </form>
+{% endblock %}
