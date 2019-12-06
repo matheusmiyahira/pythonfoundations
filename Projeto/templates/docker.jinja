@@ -1,0 +1,30 @@
+{% extends "base.jinja" %} {% block title %} Docker {% endblock %} {% block
+title_card %}
+<p class="card-text">
+  Container: <b>{{ container.image }}</b>
+</p>
+{% endblock %} {% block conteudo %}
+<div class="panel-body">
+  <ul class="list-group">
+    <li class="list-group-item">ID: {{ container.id }}</li>
+  </ul>
+  <ul class="list-group">
+    <li class="list-group-item">Nome: {{ container.nome }}</li>
+  </ul>
+  <ul class="list-group">
+    <li class="list-group-item">Image: {{ container.image }}</li>
+  </ul>
+  <ul class="list-group">
+    <li class="list-group-item">Status: {{ container.status }}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      {% if container.status == 'running' %}
+      <a href="/docker/stop" class="btn btn-danger">Stop</a>
+      {% else %}
+      <a href="/docker/start" class="btn btn-success">Start</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

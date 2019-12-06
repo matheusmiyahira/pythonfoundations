@@ -1,0 +1,41 @@
+{% extends "base.jinja" %}
+
+{% block titulo %}
+    Jenkins
+{% endblock %}
+
+{% block titulo_card %}
+    <h5 class="card-title"> Jenkins | Jobs </h5>
+{% endblock %}
+
+{% block conteudo %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome Do Job</th>
+            <th>Testado</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.fullName }}</td>
+            <td>
+                {% if not job.firstBuild %}
+                Nunca Foi Construido
+                {% elif job.lastSuccessfulBuild.number == job.nextBuildNumber-1 %}
+                Sucesso
+                {% else %}
+                Falha
+                {% endif %}
+            </td>
+            <td>
+                <a href="/jenkins/build/{{ job.fullName }}" class="fa fa-repeat"></a>
+                <a href="/jenkins/update/{{ job.fullName }}" class="fa fa-pencil"></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
