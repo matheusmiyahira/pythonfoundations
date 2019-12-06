@@ -31,7 +31,7 @@ def jenkins_build(job_name):
         print(e)
     return flask.redirect(flask.url_for('jenkins.index'))
 
-@jenkins_route.route('/update/<string:job_name>')
+@jenkins_routes.route('/update/<string:job_name>')
 def jenkins_updade(job_name):
     try:
         client = jenkins.Jenkins('http://localhost:8080',username='admin',password='admin')
@@ -41,11 +41,11 @@ def jenkins_updade(job_name):
         }
     except Exception as e:
         print(e)
-    return flask.render_template('jenkins_update.jinja', job)
+    return flask.render_template('jenkins_update.jinja', job=job)
 
-@jenkins_route.route('/rebuild', method=['POST'])
+@jenkins_routes.route('/rebuild', methods=['POST'])
 def jenkins_rebuild():
-    data = flask.request.form()
+    data = flask.request.form
     try:
         client = jenkins.Jenkins('http://localhost:8080',username='admin',password='admin')
         client.reconfig_job(data['name'], data['xml'])

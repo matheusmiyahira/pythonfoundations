@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block conteudo %}
-    <form action="/rebuild" method="POST">
+    <form action="/jenkins/rebuild" method="POST">
         <input type="hidden" name="name" value="{{ job.name }}">
         <textarea name="xml" id="" rows="16" class="form-control">{{ job.xml }}</textarea>
         <br>

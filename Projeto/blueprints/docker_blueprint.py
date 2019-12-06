@@ -1,11 +1,11 @@
 import flask
 import docker
 
-docker_blueprint = flask.Blueprint(
+docker_routes = flask.Blueprint(
     name='docker', import_name=__name__, url_prefix='/docker')
 
 
-@docker_blueprint.route('/')
+@docker_routes.route('/')
 def index():
     try:
         client = docker.from_env()
@@ -17,13 +17,13 @@ def index():
             'status': container.status
         }
     except Exception as e:
-        flask_app = None
+        flask_app = {}
         # print(e)
     finally:
         return flask.render_template('docker.jinja', container=flask_app)
 
 
-@docker_blueprint.route('/start')
+@docker_routes.route('/start')
 def start():
     try:
         client = docker.from_env()
@@ -34,7 +34,7 @@ def start():
     return(flask.redirect(flask.url_for('docker.index')))
 
 
-@docker_blueprint.route('/stop')
+@docker_routes.route('/stop')
 def stop():
     try:
         client = docker.from_env()
