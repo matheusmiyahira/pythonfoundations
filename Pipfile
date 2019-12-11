@@ -24,6 +24,8 @@ docker = "*"
 jenkins = "*"
 python-jenkins = "*"
 ldap3 = "*"
+logging = "*"
+paramiko = "*"
 
 [requires]
 python_version = "3.7"

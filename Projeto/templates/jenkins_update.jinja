@@ -1,18 +1,18 @@
 {% extends "base.jinja" %}
 
-{% block title %}
+{% block titulo %}
     Atualizar Job
 {% endblock %}
 
-{% block title_card %}
-    <h5 class="card-title">Atualizar Job {{ job.name }}</h5>
+{% block titulo_card %}
+    <h5 class="card-title"> Atualizar Job {{ job.name }} </h5>
 {% endblock %}
 
 {% block conteudo %}
-    <form action="/jenkins/rebuild" method="POST">
-        <input type="hidden" name="name" value="{{ job.name }}">
-        <textarea name="xml" id="" rows="16" class="form-control">{{ job.xml }}</textarea>
+    <form action="/jenkins/rebuild" method="post">
+        <input type="hidden" name="name" value='{{ job.name }}'>
+        <textarea class="form-control" name="xml" rows="16">{{ job.xml }}</textarea>
         <br>
-        <button type="submit" class="btn btn-primary pull-right">Enviar</button>
+        <button class='btn btn-primary pull-right' type="submit">Enviar</button>
     </form>
 {% endblock %}

@@ -14,8 +14,7 @@ client = ldap3.Connection(server,f'cn={username},dc=example,dc=org', password)
 client.bind()
 # print(client)
 
-
-# INSERINDO USUARIO
+# Inserindo um usuário
 
 md5json = md5('senhaSuperSegura'.encode('utf-8')).digest()
 
@@ -31,24 +30,26 @@ user = {
 }
 
 objectClass = ['top','person','organizationalPerson','inetOrgPerson', 'posixAccount']
+
 cn = 'uid=' + user['mail'] + ',dc=example,dc=org'
-# print(client.add(cn,objectClass,user))
 
+print(client.add(cn,objectClass,user))
 
-# PESQUISANDO USUARIO
+#Pequisando um usuário
 email = 'aosom.dequem@cleitonrasta.com.br'
 dn = 'uid=' + email + ',dc=example,dc=org'
 # client.search(dn,'(objectclass=person)',attributes=['cn','sn'])
+
 # print(client.entries)
 
-
-# ALTERANDO USUARIO
+#Alterando um usuário
 changes = {
     'cn': [(ldap3.MODIFY_REPLACE, ['xuxa'])],
     'sn': [(ldap3.MODIFY_REPLACE, ['meneguel'])]
 }
-# client.modify(dn,changes)
+
+# client.modify(dn, changes)
 # print(client.result)
 
-# DELETANDO USUARIO
+# Deletar um usuário
 # print(client.delete(dn))

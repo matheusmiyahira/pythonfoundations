@@ -1,0 +1,22 @@
+[ 10/12/2019 20:01:07 ] [ DEBUG ] root
+ <module> [logs.py, 11 ] Mensagem de Debug
+[ 10/12/2019 20:01:07 ] [ INFO ] root
+ <module> [logs.py, 12 ] Mensagem de info
+[ 10/12/2019 20:01:07 ] [ WARNING ] root
+ <module> [logs.py, 13 ] Mensagem de Warning
+[ 10/12/2019 20:01:07 ] [ ERROR ] root
+ <module> [logs.py, 14 ] Mensagem de error
+[ 10/12/2019 20:01:07 ] [ CRITICAL ] root
+ <module> [logs.py, 15 ] Mensagem de Debug
+[ 10/12/2019 20:01:46 ] [ DEBUG ] root
+ <module> [logs.py, 11 ] Mensagem de Debug
+[ 10/12/2019 20:01:46 ] [ INFO ] root
+ <module> [logs.py, 12 ] Mensagem de info
+[ 10/12/2019 20:01:46 ] [ WARNING ] root
+ <module> [logs.py, 13 ] Mensagem de Warning
+[ 10/12/2019 20:01:46 ] [ ERROR ] root
+ <module> [logs.py, 14 ] Mensagem de error
+[ 10/12/2019 20:01:47 ] [ CRITICAL ] root
+ <module> [logs.py, 15 ] Mensagem de Debug
+[ 10/12/2019 20:01:47 ] [ ERROR ] root
+ <module> [logs.py, 26 ] unsupported operand type(s) for +: 'int' and 'str'
